@@ -23,7 +23,7 @@ namespace LearBank.Dal
         {
             using (var connection = CreateConnection())
             {
-                string sql = @"INSERT INTO USUARIOS (EMAIL, SENHA) VALUES (:Email, :Senha) RETURNING ID INTO :Id";
+                string sql = $@"INSERT INTO USUARIOS (EMAIL, SENHA) VALUES (:Email, :Senha) RETURNING Id INTO :Id";
                 var parameters = new DynamicParameters();
 
                 parameters.Add("Email", email);
@@ -42,7 +42,7 @@ namespace LearBank.Dal
         {
             using (var connection = CreateConnection())
             {
-                string sql = @"SELECT * FROM USUARIOS WHERE EMAIL = :Email";
+                string sql = $@"SELECT * FROM USUARIOS WHERE EMAIL = :Email";
                 var parameters = new DynamicParameters();
 
                 parameters.Add("Email", email);

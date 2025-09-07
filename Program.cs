@@ -27,7 +27,7 @@ namespace LearBank
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var connectionString = Configuration.GetConnectionString("OracleDb");
+            string connectionString = Configuration.GetConnectionString("OracleDb");
 
             IUsuarioRepository usuarioRepository = new UsuarioRepository(connectionString);
             var usuarioService = new UsuarioService(usuarioRepository);

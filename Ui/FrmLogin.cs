@@ -36,7 +36,7 @@ namespace LearBank.UI
 
                 Usuario usuario = await _usuarioService.AutenticarUsuario(txtEmail.Text, txtSenha.Text);
 
-                if (UsuarioLogado == null)
+                if (usuario == null)
                 {
                     MessageBox.Show("Email ou senha inválidos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -94,5 +94,6 @@ namespace LearBank.UI
                 btnLogin.Enabled = true;
             }
         }
+
     }
 }
