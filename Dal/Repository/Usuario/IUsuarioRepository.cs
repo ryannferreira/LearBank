@@ -9,7 +9,7 @@ namespace LearBank.Dal
 {
     public interface IUsuarioRepository
     {
-        Task<Usuario> CriarUsuario(string email, string senha);
+        Task<Usuario> CriarUsuario(string nomeCompleto, string cpf, DateTime dataNascimento, string email, string senhaHash);
         Task<Usuario> ObterUsuarioPorEmail(string email);
     }
 }

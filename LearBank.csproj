@@ -132,10 +132,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bll\IUsuarioService.cs" />
-    <Compile Include="Bll\UsuarioService.cs" />
-    <Compile Include="Dal\Repository\IUsuarioRepository.cs" />
-    <Compile Include="Dal\Repository\UsuarioRepository.cs" />
+    <Compile Include="Bll\Usuario\IUsuarioService.cs" />
+    <Compile Include="Bll\Usuario\UsuarioService.cs" />
+    <Compile Include="Dal\Repository\Conta\ContaRepository.cs" />
+    <Compile Include="Dal\Repository\Conta\IContaRepository.cs" />
+    <Compile Include="Dal\Repository\Transacao\ITransacaoRepository.cs" />
+    <Compile Include="Dal\Repository\Usuario\IUsuarioRepository.cs" />
+    <Compile Include="Dal\Repository\Transacao\TransacaoRepository.cs" />
+    <Compile Include="Dal\Repository\Usuario\UsuarioRepository.cs" />
     <Compile Include="Dal\MigrationDbContext .cs" />
     <Compile Include="Dal\MigrationDbContextFactory.cs" />
     <Compile Include="Migrations\202509071845339_MigrationInicial.cs" />
@@ -155,6 +159,8 @@
       <DependentUpon>202509072006486_AjusteTiposDeDadosTabelaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Conta.cs" />
+    <Compile Include="Model\Transacao.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Ui\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -170,6 +176,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ui\FrmRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\FrmRegistrar.Designer.cs">
+      <DependentUpon>FrmRegistrar.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Migrations\202509071845339_MigrationInicial.resx">
       <DependentUpon>202509071845339_MigrationInicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +206,9 @@
     <EmbeddedResource Include="Ui\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ui\FrmRegistrar.resx">
+      <DependentUpon>FrmRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -217,7 +232,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Bll\Conta\" />
+    <Folder Include="Bll\Transacao\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

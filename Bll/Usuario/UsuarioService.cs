@@ -17,7 +17,7 @@ namespace LearBank.Bll
             _usuarioRepository = usuarioRepository;
         }
 
-        public async Task<Usuario> CriarUsuario(string email, string senha)
+        public async Task<Usuario> CriarUsuario(string nomeCompleto, string cpf, DateTime dataNascimento, string email, string senha)
         {
             bool emailValido = EmailValido(email);
 
@@ -35,7 +35,7 @@ namespace LearBank.Bll
 
             string senhaHash = BCrypt.Net.BCrypt.HashPassword(senha);
 
-            usuario = await _usuarioRepository.CriarUsuario(email, senhaHash);
+            usuario = await _usuarioRepository.CriarUsuario(nomeCompleto, cpf, dataNascimento, email, senhaHash);
 
             return usuario;
         }
@@ -49,7 +49,7 @@ namespace LearBank.Bll
                 return null;
             }
 
-            bool senhaValida = BCrypt.Net.BCrypt.Verify(senha, usuario.Senha);
+            bool senhaValida = BCrypt.Net.BCrypt.Verify(senha, usuario.SenhaHash);
 
             return senhaValida ? usuario : null;
         }

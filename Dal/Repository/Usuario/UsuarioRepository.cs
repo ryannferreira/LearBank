@@ -19,22 +19,27 @@ namespace LearBank.Dal
         }
         private IDbConnection CreateConnection() => new OracleConnection(_connectionString);
 
-        public async Task<Usuario> CriarUsuario(string email, string senha)
+        public async Task<Usuario> CriarUsuario(string nomeCompleto, string cpf, DateTime dataNascimento, string email, string senhaHash)
         {
             using (var connection = CreateConnection())
             {
-                string sql = $@"INSERT INTO USUARIOS (EMAIL, SENHA) VALUES (:Email, :Senha) RETURNING Id INTO :Id";
+                string sql = $@"INSERT INTO USUARIOS (NOME_COMPLETO, CPF, DATA_NASCIMENTO, EMAIL, SENHA_HASH, DATA_CADASTRO, ATIVO) VALUES (:NomeCompleto, :Cpf, :DataNascimento, :Email, :SenhaHash, :DataCadastro, :Ativo) RETURNING Id INTO :Id";
                 var parameters = new DynamicParameters();
 
+                parameters.Add("NomeCompleto", nomeCompleto);
+                parameters.Add("Cpf", cpf);
+                parameters.Add("DataNascimento", dataNascimento);
                 parameters.Add("Email", email);
-                parameters.Add("Senha", senha);
+                parameters.Add("SenhaHash", senhaHash);
+                parameters.Add("DataCadastro", DateTime.Now);
+                parameters.Add("Ativo", true);
                 parameters.Add("Id", dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                 await connection.ExecuteAsync(sql, parameters);
 
                 int id = parameters.Get<int>("Id");
 
-                return new Usuario { Id = id, Email = email, Senha = senha };
+                return new Usuario { Id = id, NomeCompleto = nomeCompleto, Cpf = cpf, DataNascimento = dataNascimento, Email = email, SenhaHash = senhaHash };
             }
         }
 

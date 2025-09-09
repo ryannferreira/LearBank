@@ -10,6 +10,6 @@ namespace LearBank.Bll
     public interface IUsuarioService
     {
         Task<Usuario> AutenticarUsuario(string email, string senha);
-        Task<Usuario> CriarUsuario(string email, string senha);
+        Task<Usuario> CriarUsuario(string nomeCompleto, string cpf, DateTime dataNascimento, string email, string senha);
     }
 }
