@@ -63,6 +63,12 @@ namespace LearBank.UI
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             var frmRegistrar = new FrmRegistrar(_usuarioService);
+            frmRegistrar.ShowDialog();
+
+            if (frmRegistrar.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("Usuário registrado com sucesso! Agora você pode fazer login.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
     }

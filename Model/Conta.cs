@@ -31,7 +31,7 @@ namespace LearBank.Model
         public TipoDeConta TipoConta { get; set; }
 
         [Required]
-        [Column("SALDO", TypeName = "decimal(18, 2)")]
+        [Column("SALDO")]
         public decimal Saldo { get; set; }
 
         [Required]

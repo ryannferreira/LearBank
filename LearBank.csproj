@@ -158,6 +158,10 @@
     <Compile Include="Migrations\202509072006486_AjusteTiposDeDadosTabelaUsuarios.Designer.cs">
       <DependentUpon>202509072006486_AjusteTiposDeDadosTabelaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202509222228476_ModificoesEntidades.cs" />
+    <Compile Include="Migrations\202509222228476_ModificoesEntidades.Designer.cs">
+      <DependentUpon>202509222228476_ModificoesEntidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Conta.cs" />
     <Compile Include="Model\Transacao.cs" />
@@ -193,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202509072006486_AjusteTiposDeDadosTabelaUsuarios.resx">
       <DependentUpon>202509072006486_AjusteTiposDeDadosTabelaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509222228476_ModificoesEntidades.resx">
+      <DependentUpon>202509222228476_ModificoesEntidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
