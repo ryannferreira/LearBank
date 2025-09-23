@@ -7,13 +7,13 @@ namespace LearBank.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class AjusteConfigTabelaUsuarios : IMigrationMetadata
+    public sealed partial class MigrationInicial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AjusteConfigTabelaUsuarios));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MigrationInicial));
         
         string IMigrationMetadata.Id
         {
-            get { return "202509071929574_AjusteConfigTabelaUsuarios"; }
+            get { return "202509231216058_MigrationInicial"; }
         }
         
         string IMigrationMetadata.Source

@@ -142,25 +142,9 @@
     <Compile Include="Dal\Repository\Usuario\UsuarioRepository.cs" />
     <Compile Include="Dal\MigrationDbContext .cs" />
     <Compile Include="Dal\MigrationDbContextFactory.cs" />
-    <Compile Include="Migrations\202509071845339_MigrationInicial.cs" />
-    <Compile Include="Migrations\202509071845339_MigrationInicial.Designer.cs">
-      <DependentUpon>202509071845339_MigrationInicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202509071929574_AjusteConfigTabelaUsuarios.cs" />
-    <Compile Include="Migrations\202509071929574_AjusteConfigTabelaUsuarios.Designer.cs">
-      <DependentUpon>202509071929574_AjusteConfigTabelaUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202509071936561_AjusteTabelaUsuarios.cs" />
-    <Compile Include="Migrations\202509071936561_AjusteTabelaUsuarios.Designer.cs">
-      <DependentUpon>202509071936561_AjusteTabelaUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202509072006486_AjusteTiposDeDadosTabelaUsuarios.cs" />
-    <Compile Include="Migrations\202509072006486_AjusteTiposDeDadosTabelaUsuarios.Designer.cs">
-      <DependentUpon>202509072006486_AjusteTiposDeDadosTabelaUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202509222228476_ModificoesEntidades.cs" />
-    <Compile Include="Migrations\202509222228476_ModificoesEntidades.Designer.cs">
-      <DependentUpon>202509222228476_ModificoesEntidades.cs</DependentUpon>
+    <Compile Include="Migrations\202509231216058_MigrationInicial.cs" />
+    <Compile Include="Migrations\202509231216058_MigrationInicial.Designer.cs">
+      <DependentUpon>202509231216058_MigrationInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Conta.cs" />
@@ -186,20 +170,8 @@
     <Compile Include="Ui\FrmRegistrar.Designer.cs">
       <DependentUpon>FrmRegistrar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202509071845339_MigrationInicial.resx">
-      <DependentUpon>202509071845339_MigrationInicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202509071929574_AjusteConfigTabelaUsuarios.resx">
-      <DependentUpon>202509071929574_AjusteConfigTabelaUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202509071936561_AjusteTabelaUsuarios.resx">
-      <DependentUpon>202509071936561_AjusteTabelaUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202509072006486_AjusteTiposDeDadosTabelaUsuarios.resx">
-      <DependentUpon>202509072006486_AjusteTiposDeDadosTabelaUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202509222228476_ModificoesEntidades.resx">
-      <DependentUpon>202509222228476_ModificoesEntidades.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202509231216058_MigrationInicial.resx">
+      <DependentUpon>202509231216058_MigrationInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

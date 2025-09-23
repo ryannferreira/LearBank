@@ -17,7 +17,7 @@ namespace LearBank.Model
         public long Id { get; set; }
 
         [Required]
-        [Column("VALOR", TypeName = "decimal(18, 2)")]
+        [Column("VALOR")]
         public decimal Valor { get; set; }
 
         [Required]

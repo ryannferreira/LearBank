@@ -32,7 +32,7 @@ namespace LearBank.Dal
                 parameters.Add("Email", email);
                 parameters.Add("SenhaHash", senhaHash);
                 parameters.Add("DataCadastro", DateTime.Now);
-                parameters.Add("Ativo", true);
+                parameters.Add("Ativo", 1);
                 parameters.Add("Id", dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                 await connection.ExecuteAsync(sql, parameters);

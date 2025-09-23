@@ -43,6 +43,7 @@ namespace LearBank.Bll
         public async Task<Usuario> AutenticarUsuario(string email, string senha)
         {
             Usuario usuario = await _usuarioRepository.ObterUsuarioPorEmail(email);
+            Console.WriteLine(usuario);
 
             if (usuario == null)
             {
